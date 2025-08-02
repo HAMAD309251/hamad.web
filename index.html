@@ -1,41 +1,45 @@
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Wibsite</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <header>
-    <h1>Eng.Hamad AL-Naseer</h1>
-    <p>Cybersecurity student</p>
-    <div class="welcome-popup" id="welcome">
-       <span>welcome to my Wibsite!</span>
-    </div>
-  </header>
+  <!-- خلفية النجوم المتحركة -->
+  <canvas id="star-canvas"></canvas>
 
-  <nav>
+  <header>
+    <h1>Eng. Hamad AL-Naseer</h1>
+    <p>Cybersecurity Student</p>
+  </header>
+  
+
+  <nav id="navbar">
     <a href="#about">About me</a>
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact with me</a>
   </nav>
 
-  <section id="about">
-    <div class="card" data-aos="fade-up">
-      <img src="1744312263168.jpg" alt="صورة شخصية" class="profile">
+  <main>
+    <section id="about" class="section-card" data-aos="fade-up">
+      <img src="1744312263168.jpg" alt="صورة شخصية" class="profile" />
       <h2>? Who am I</h2>
-      <p>I am Hamad Al-Nasser, studying cybersecurity at the University Sana'a. I am passionate about technology and aspire to be a pioneer in the field of digital protection</p>
-    </div>
-   
-  </section>
+      <p>
+        I am Hamad Al-Nasser, studying cybersecurity at the University Sana'a. I am passionate about technology
+        and aspire to be a pioneer in the field of digital protection
+      </p>
+    </section>
 
-  <section id="skills">
-    <div class="card" data-aos="fade-up">
+    <section id="skills" class="section-card" data-aos="fade-up">
       <h2>Skills</h2>
       <ul>
         <li>Cybersecurity Basics</li>
@@ -43,27 +47,63 @@
         <li>Python and JavaScript programming</li>
         <li>Website design using HTML and CSS</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <section id="education">
-    <div class="card" data-aos="fade-up">
+    <section id="education" class="section-card" data-aos="fade-up">
       <h2>Education</h2>
       <p>I am currently studying at the University Sana'a - Sana'a, majoring in Cyber Security</p>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <div class="card" data-aos="fade-up">
+    <section id="contact" class="section-card" data-aos="fade-up">
       <h2>Contact with me</h2>
-      <p>:You can contact me via email or phone number</p>
-      <p><a href="mailto :hamadalnaseer17@gmail.com">hamadalnaseer17@gmail.com</a><br><br>783323559-737258163</p>
-    </div>
-  </section>
+      <p>:You can contact with me about email or phone number</p>
+      <p><a href="mailto:hamadalnaseer17@gmail.com">hamadalnaseer17@gmail.com</a><br /><br />783323559 - 737258163</p>
+    </section>
+  </main>
+
+  <!-- زر تبديل الوضع الليلي والنهاري -->
+  <button id="theme-toggle" aria-label="تبديل الوضع" class="theme-toggle" title="تبديل الوضع">
+    <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+    </svg>
+    <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
 
   <footer>
-    <p>  Developed by Eng. Hamad Al-Naseer&copy; 2025</p>
+    <div class="footer-container">
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/profile.php?id=61555731700967" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="mailto:hamadalnaseer17@gmail.com" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hamad-alnaseer-7697b4335" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/hamad.cys?igsh=MW4zN3p0NjloaHJiMw==" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" title="Cybersecurity">
+          <i class="fas fa-laptop-code"></i>
+        </a>
+      </div>
+      <p>💻 Developed by <strong>Eng. Hamad Al-Naseer</strong> &copy; 2025</p>
+    </div>
   </footer>
+  
+  
+  
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
